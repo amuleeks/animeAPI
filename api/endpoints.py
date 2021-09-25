@@ -14,10 +14,7 @@ def read():
         character_map = dict()
         anime_reader = csv.reader(csvfile)
         for line in anime_reader:
-            character = line[0]
-            anime = line[1]
-            personality = line[2]
-            rank = line[3]
+            character, anime, personality, rank = line[0], line[1], line[2], line[3]
             character_map[character] = [anime, personality, rank]
         return character_map
 
